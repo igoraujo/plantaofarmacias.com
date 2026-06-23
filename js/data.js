@@ -7,7 +7,7 @@ const PHARMACY_DATA = {
   pharmacies: [
     {
       name: "Guarapiranga",
-      phone: "(31) 3746-1228",
+      phone: "(031) 3746-1228",
       whatsapp: "+5531998611130",
       address: "R. Santo Antônio, 51 - Centro, Piranga - MG, 36480-000",
       addressLink: "https://maps.app.goo.gl/qKJ7jfMPQQFcBGwY8",
@@ -17,7 +17,7 @@ const PHARMACY_DATA = {
     },
     {
       name: "UAI Farma",
-      phone: "(31) 3746-2211",
+      phone: "(031) 3746-2211",
       whatsapp: "+5531992285473",
       address: "R. Benedito Valadares, 58 - Centro, Piranga - MG, 36480-000",
       addressLink: "https://maps.app.goo.gl/bzo1197WZVvzGMPx6",
@@ -27,7 +27,7 @@ const PHARMACY_DATA = {
     },
     {
       name: "Dora",
-      phone: "(31) 3746-1112",
+      phone: "(031) 3746-1112",
       whatsapp: "+5531998189251",
       address: "R. Vereadora Maria Anselmo, 110 - Piranga, MG, 36480-000",
       addressLink: "https://maps.app.goo.gl/MdVi4qy7fEfTidWEA",
@@ -37,7 +37,7 @@ const PHARMACY_DATA = {
     },
     {
       name: "São Pedro",
-      phone: "(31) 3746-1620",
+      phone: "(031) 3746-1620",
       whatsapp: "+5531995472385",
       address: "R. Vereadora Maria Anselmo, 23 - Centro, Piranga - MG, 36480-000",
       addressLink: "https://maps.app.goo.gl/jZ5VXFMc9GT6DkKV6",
@@ -47,7 +47,7 @@ const PHARMACY_DATA = {
     },
     {
       name: "Multifarma",
-      phone: "(31) 97193-0664",
+      phone: "(031) 97193-0664",
       whatsapp: "+5531971930664",
       address: "R. Benedito Valadares, 32 - Centro, Piranga - MG, 36480-000",
       addressLink: "https://maps.app.goo.gl/zYkNG4k3Dxmq7vww5",
@@ -57,7 +57,7 @@ const PHARMACY_DATA = {
     },
     {
       name: "Drogary",
-      phone: "(31) 3746-1360",
+      phone: "(031) 3746-1360",
       whatsapp: "+5531996176401",
       address: "Praça Américo Silva, 120 - Centro, Piranga - MG, 36480-000",
       addressLink: "https://maps.google.com/maps?q=Pra%C3%A7a+Am%C3%A9rico+Silva,+120,+Piranga,+MG",
