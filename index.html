@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Consulte o plantão de farmácias de Piranga - MG. Saiba qual farmácia está aberta agora." />
+  <meta name="theme-color" content="#1a6fb5" />
+  <title>Plantão de Farmácias — Piranga, MG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-cross"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Plantão de Farmácias</span>
+          <span class="brand-subtitle">Piranga — Minas Gerais</span>
+        </div>
+      </div>
+      <div class="header-emergency">
+        <a href="tel:192" class="emergency-btn">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span>SAMU 192</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero-section">
+      <div class="hero-label">
+        <i class="fa-regular fa-clock"></i>
+        <span id="hero-label-text">Verificando plantão de hoje...</span>
+      </div>
+      <div id="hero-date-display" class="hero-date"></div>
+    </section>
+
+    <!-- FILTRO DE DATA -->
+    <section class="date-filter-section" id="date-filter-section">
+      <div class="date-filter-card">
+        <div class="date-filter-header">
+          <i class="fa-regular fa-calendar-days"></i>
+          <span>Consultar plantão por data</span>
+        </div>
+        <div class="date-filter-body">
+          <input
+            type="date"
+            id="date-picker"
+            class="date-input"
+            aria-label="Selecione uma data para consultar o plantão"
+          />
+          <button class="btn-today" id="btn-today" aria-label="Voltar para hoje">
+            <i class="fa-solid fa-rotate-left"></i>
+            Hoje
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARD PRINCIPAL DE PLANTÃO -->
+    <section class="shift-card-section" id="shift-card-section">
+      <div class="shift-card-wrapper" id="shift-card-wrapper">
+        <!-- Injetado via JS -->
+        <div class="shift-loading" id="shift-loading">
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring delay-1"></div>
+          <div class="pulse-ring delay-2"></div>
+          <p>Carregando plantão...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRÓXIMOS PLANTÕES -->
+    <section class="upcoming-section" id="upcoming-section">
+      <h2 class="section-title">
+        <i class="fa-solid fa-calendar-check"></i>
+        Próximos Plantões
+      </h2>
+      <div class="upcoming-list" id="upcoming-list">
+        <!-- Injetado via JS -->
+      </div>
+    </section>
+
+    <!-- LISTA DE FARMÁCIAS -->
+    <section class="pharmacies-section" id="pharmacies-section">
+      <h2 class="section-title">
+        <i class="fa-solid fa-store-alt"></i>
+        Farmácias em Piranga
+      </h2>
+      <div class="pharmacies-grid" id="pharmacies-grid">
+        <!-- Injetado via JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-emergency">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Em caso de emergência, ligue para o <a href="tel:192"><strong>SAMU 192</strong></a>
+      </p>
+      <p class="footer-credits">Plantão de Farmácias · Piranga, MG</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
