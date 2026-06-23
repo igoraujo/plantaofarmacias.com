@@ -126,7 +126,7 @@ function renderShiftCard(dateStr, isToday = false) {
 /**
  * Gera HTML do card de "sem plantão"
  */
-function renderNoShiftCard(dateStr) {
+function renderNoShiftCard() {
   const phonesHTML = PHARMACY_DATA.pharmacies.map(p => `
     <a href="tel:${p.phone.replace(/\D/g,'')}" class="no-shift-phone">
       <i class="fa-solid fa-phone"></i>
@@ -145,9 +145,7 @@ function renderNoShiftCard(dateStr) {
         Não há um plantão específico agendado para esta data.<br>
         Recomendamos entrar em contato com as farmácias:
       </p>
-      <div class="no-shift-phones">
-        ${phonesHTML}
-      </div>
+      
     </div>
   `;
 }
@@ -220,7 +218,7 @@ function renderPharmacyCard(pharmacy, dateStr, isToday) {
           </div>
           <div class="contact-btn-info">
             <span class="contact-btn-label">Enviar mensagem</span>
-            <span class="contact-btn-value">WhatsApp</span>
+            <span class="contact-btn-value">${waNumber}</span>
           </div>
           <i class="fa-solid fa-chevron-right contact-btn-arrow"></i>
         </a>
@@ -295,6 +293,9 @@ function renderPharmaciesGrid() {
     const colors = PHARMACY_COLORS[p.name] || { accent: '#1a6fb5' };
     const phoneClean = p.phone.replace(/\D/g, '');
     const waNumber = p.whatsapp.replace(/\D/g, '');
+    const noCountry = p.whatsapp.replace(/^\+55/, "");
+    const cellNumber = noCountry.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+
     return `
       <article class="pharmacy-mini-card" aria-label="Farmácia ${p.name}">
         <div class="pmc-header" style="--pmc-color: ${colors.accent}">
@@ -308,7 +309,7 @@ function renderPharmaciesGrid() {
             <i class="fa-solid fa-phone"></i> ${p.phone}
           </a>
           <a href="https://wa.me/${waNumber}" target="_blank" rel="noopener" class="pmc-link pmc-link--wa">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            <i class="fa-brands fa-whatsapp"></i> ${cellNumber}
           </a>
           <a href="${p.addressLink}" target="_blank" rel="noopener" class="pmc-link pmc-link--maps">
             <i class="fa-solid fa-location-dot"></i> Ver no mapa

@@ -18,7 +18,7 @@ const PHARMACY_DATA = {
     {
       name: "UAI Farma",
       phone: "(31) 3746-2211",
-      whatsapp: "+55319992854730",
+      whatsapp: "+5531992854730",
       address: "R. Benedito Valadares, 58 - Centro, Piranga - MG, 36480-000",
       addressLink: "https://maps.app.goo.gl/bzo1197WZVvzGMPx6",
       site: "https://uaifarma.com.br/",
